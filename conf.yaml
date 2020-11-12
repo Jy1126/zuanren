@@ -1,0 +1,7 @@
+host: 10.25.24.194
+
+port: 3306
+
+user: mc-test
+
+password: mc-test
