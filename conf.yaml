@@ -5,3 +5,7 @@ port: 3306
 user: mc-test
 
 password: mc-test
+
+sendmailUrl: "https://sms.qilu-dev.com/srv/sms/sendmailcommon"
+
+sendAddress: "838727979@qq.com"

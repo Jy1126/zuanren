@@ -9,10 +9,11 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
-	"xtpwidget/dao"
-	"xtpwidget/models"
-	"xtpwidget/routes"
-	"xtpwidget/utils"
+	"xtp_account_check/cron"
+	"xtp_account_check/dao"
+	"xtp_account_check/models"
+	"xtp_account_check/routes"
+	"xtp_account_check/utils"
 )
 
 func main() {
@@ -37,6 +38,9 @@ func main() {
 		Addr:    ":8080",
 		Handler: router,
 	}
+
+	// 定时任务
+	go cron.Check()
 
 	// 优雅退出
 	go func() {

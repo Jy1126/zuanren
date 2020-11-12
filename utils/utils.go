@@ -10,10 +10,12 @@ import (
 )
 
 type Conf struct {
-	Host     string `yaml:"host"`
-	Port     string `yaml:"port"`
-	User     string `yaml:"user"`
-	Password string `yaml:"password"`
+	Host        string `yaml:"host"`
+	Port        string `yaml:"port"`
+	User        string `yaml:"user"`
+	Password    string `yaml:"password"`
+	SendmailUrl string `yaml:"sendmailUrl"`
+	SendAddress string `yaml:"sendAddress"`
 }
 
 var (
@@ -37,6 +39,9 @@ func GetConf() {
 	dbPort := os.Getenv("DB_Port")
 	dbUser := os.Getenv("DB_User")
 	dbPassword := os.Getenv("DB_Password")
+	sendmailUrl := os.Getenv("sendmailurl")
+	sendAddress := os.Getenv("sendaddress")
+
 	if dbHost != "" {
 		Config.Host = dbHost
 
@@ -52,6 +57,12 @@ func GetConf() {
 	if dbPassword != "" {
 		Config.Password = dbPassword
 
+	}
+	if sendmailUrl != "" {
+		Config.SendmailUrl = sendmailUrl
+	}
+	if sendAddress != "" {
+		Config.SendAddress = sendAddress
 	}
 
 }

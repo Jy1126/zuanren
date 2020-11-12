@@ -3,7 +3,7 @@ package handler
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	srv "xtpwidget/service"
+	srv "xtp_account_check/service"
 )
 
 func GetBindCount(c *gin.Context) {

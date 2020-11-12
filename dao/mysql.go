@@ -7,7 +7,7 @@ import (
 	"gorm.io/gorm"
 	"log"
 	"time"
-	"xtpwidget/utils"
+	"xtp_account_check/utils"
 )
 
 var (

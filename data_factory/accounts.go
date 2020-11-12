@@ -1,8 +1,8 @@
 package data_factory
 
 import (
-	"xtpwidget/dao"
-	"xtpwidget/models"
+	"xtp_account_check/dao"
+	"xtp_account_check/models"
 )
 
 func GetBindCount() int64 {

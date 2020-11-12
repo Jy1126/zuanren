@@ -2,7 +2,7 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	"xtpwidget/handler"
+	"xtp_account_check/handler"
 )
 
 func SetupV0Router(r *gin.Engine) {
