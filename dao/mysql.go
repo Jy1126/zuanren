@@ -5,9 +5,10 @@ import (
 	"fmt"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+	"gorm.io/gorm/schema"
 	"log"
 	"time"
-	"xtp_account_check/utils"
+	"zuanren/utils"
 )
 
 var (
@@ -16,8 +17,10 @@ var (
 )
 
 func InitMySQL() (err error) {
-	dsn := fmt.Sprintf("%s:%s@(%s:%s)/joomla?charset=utf8&parseTime=True&loc=Local", utils.Config.User, utils.Config.Password, utils.Config.Host, utils.Config.Port)
-	DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	dsn := fmt.Sprintf("%s:%s@(%s:%s)/test?charset=utf8&parseTime=True&loc=Local", utils.Config.User, utils.Config.Password, utils.Config.Host, utils.Config.Port)
+	DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{NamingStrategy: schema.NamingStrategy{
+		SingularTable: true,
+	}})
 
 	if err != nil {
 		log.Fatal("failed to connect database:", err)

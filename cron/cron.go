@@ -4,13 +4,14 @@ import (
 	"github.com/robfig/cron"
 	"log"
 	"time"
-	srv "xtp_account_check/service"
+	srv "zuanren/service"
 )
 
 func Check() {
 	log.Println("Starting...")
 
 	c := cron.New()
+	// 每天9点执行一次定时任务
 	_ = c.AddFunc("0 0 9 * * *", func() {
 		log.Println("Run Check Count...")
 		srv.SendCheckCount()

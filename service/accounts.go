@@ -3,8 +3,8 @@ package service
 import (
 	"fmt"
 	"strconv"
-	df "xtp_account_check/data_factory"
-	"xtp_account_check/utils"
+	df "zuanren/data_factory"
+	"zuanren/utils"
 )
 
 func GetBindCount() (int64, int64) {

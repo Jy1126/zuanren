@@ -1,10 +1,10 @@
-host: 10.25.24.194
+host: localhost
 
 port: 3306
 
-user: mc-test
+user: root
 
-password: mc-test
+password:
 
 sendmailUrl: "https://sms.qilu-dev.com/srv/sms/sendmailcommon"
 

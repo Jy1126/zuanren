@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/xtp_account_check.iml" filepath="$PROJECT_DIR$/.idea/xtp_account_check.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/zuanren.iml" filepath="$PROJECT_DIR$/.idea/zuanren.iml" />
     </modules>
   </component>
 </project>

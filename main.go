@@ -9,11 +9,10 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
-	"xtp_account_check/cron"
-	"xtp_account_check/dao"
-	"xtp_account_check/models"
-	"xtp_account_check/routes"
-	"xtp_account_check/utils"
+	"zuanren/dao"
+	"zuanren/models"
+	"zuanren/routes"
+	"zuanren/utils"
 )
 
 func main() {
@@ -29,6 +28,7 @@ func main() {
 
 	// 结构体与数据表关联
 	_ = dao.DB.AutoMigrate(&models.XtpAccounts{}) // xtp_accounts表
+	_ = dao.DB.AutoMigrate(&models.Content{})     // content表
 
 	// 注册路由
 	router := gin.Default()
@@ -40,7 +40,7 @@ func main() {
 	}
 
 	// 定时任务
-	go cron.Check()
+	//go cron.Check()
 
 	// 优雅退出
 	go func() {
